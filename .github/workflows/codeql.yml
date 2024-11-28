@@ -1,0 +1,28 @@
+            - name: slither-action
+  # You may pin to the exact commit or the version.
+  # uses: crytic/slither-action@f197989dea5b53e986d0f88c60a034ddd77ec9a8
+  uses: crytic/slither-action@v0.4.0
+  with:
+    # The version of solc to use. Should be autodetected, but may be specified manually.
+    solc-version: # optional
+    # The version of node to use.
+    node-version: # optional
+    # The path of the project that Slither should analyze, relative to the repo root.
+    target: # optional, default is .
+    # If provided, the path of the SARIF file to produce, relative to the repo root.
+    sarif: # optional
+    # Extra arguments to pass to Slither.
+    slither-args: # optional
+    # The path to the Slither configuration file. By default, `./slither.config.json` is used if present.
+    slither-config: # optional
+    # The version of slither-analyzer to use. By default, the latest release in PyPI is used.
+    slither-version: # optional
+    # A requirements.txt file to install alongside Slither. Useful to install custom plugins.
+    slither-plugins: # optional
+    # Whether to ignore the compilation step when running crytic-compile and Slither.
+    ignore-compile: # optional
+    # Cause the action to fail if Slither finds any findings of this severity or higher. By default it will fail if any finding is found
+    fail-on: # optional, default is all
+    # 
+    internal-github-workspace: # optional, default is ${{ toJSON(github.workspace) }}
+          
